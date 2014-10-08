@@ -1,5 +1,6 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TableLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -8,9 +9,118 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.coffeeapp.Main" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/buttonHot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hot" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonCoffee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coffee" />
+          <Button
+            android:id="@+id/buttonFrap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frappachino" />
+
+        <Button
+            android:id="@+id/buttonExpresso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expresso" />
+
+      
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonTall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tall" />
+
+        <Button
+            android:id="@+id/buttonGrande"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grande" />
+
+        <Button
+            android:id="@+id/buttonVenti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Venti" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Spinner
+            android:id="@+id/spinnerFlavor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Spinner
+            android:id="@+id/spinnerDairy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonAddDrink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Drink" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonResetOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset Order" />
+
+    </TableRow>
+
+</TableLayout>
