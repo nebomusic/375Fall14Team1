@@ -23,7 +23,7 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/buttonHot"
+            android:id="@+id/btnHot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hot" />
@@ -42,18 +42,18 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/buttonCoffee"
+            android:id="@+id/btnCoffee"
            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Coffee" />
           <Button
-            android:id="@+id/buttonFrap"
+            android:id="@+id/btnFrap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Frappachino" />
 
         <Button
-            android:id="@+id/buttonExpresso"
+            android:id="@+id/btnExpres"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Expresso" />
@@ -68,19 +68,19 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/buttonTall"
+            android:id="@+id/btnTall"
     android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tall" />
 
         <Button
-            android:id="@+id/buttonGrande"
+            android:id="@+id/btnGrande"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Grande" />
 
         <Button
-            android:id="@+id/buttonVenti"
+            android:id="@+id/btnVenti"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Venti" />
@@ -117,7 +117,7 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/buttonAddDrink"
+            android:id="@+id/btnAddDrink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add Drink" />
@@ -130,7 +130,7 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/buttonResetOrder"
+            android:id="@+id/btnReset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Reset Order" />
