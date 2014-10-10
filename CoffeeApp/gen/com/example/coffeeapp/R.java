@@ -26,6 +26,7 @@ public final class R {
     }
     public static final class id {
         public static final int TableLayout1=0x7f080000;
+<<<<<<< HEAD
         public static final int action_settings=0x7f080018;
         public static final int buttonAddDrink=0x7f080012;
         public static final int buttonCoffee=0x7f080005;
@@ -38,6 +39,20 @@ public final class R {
         public static final int buttonVenti=0x7f08000c;
         public static final int spinnerDairy=0x7f080010;
         public static final int spinnerFlavor=0x7f08000e;
+=======
+        public static final int action_settings=0x7f080017;
+        public static final int btnAddDrink=0x7f080011;
+        public static final int btnCoffee=0x7f080005;
+        public static final int btnExpres=0x7f080007;
+        public static final int btnFrap=0x7f080006;
+        public static final int btnGrande=0x7f08000a;
+        public static final int btnHot=0x7f080002;
+        public static final int btnReset=0x7f080013;
+        public static final int btnTall=0x7f080009;
+        public static final int btnVenti=0x7f08000b;
+        public static final int spinnerDairy=0x7f08000f;
+        public static final int spinnerFlavor=0x7f08000d;
+>>>>>>> e325201d8305dc17699a5cb19327e6f601c58773
         public static final int tableRow1=0x7f080001;
         public static final int tableRow2=0x7f080004;
         public static final int tableRow3=0x7f080009;
