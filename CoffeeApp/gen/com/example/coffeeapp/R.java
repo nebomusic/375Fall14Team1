@@ -26,25 +26,29 @@ public final class R {
     }
     public static final class id {
         public static final int TableLayout1=0x7f080000;
-        public static final int action_settings=0x7f080013;
-        public static final int buttonAddDrink=0x7f080010;
-        public static final int buttonCoffee=0x7f080004;
-        public static final int buttonExpresso=0x7f080006;
-        public static final int buttonFrap=0x7f080005;
-        public static final int buttonGrande=0x7f080009;
+        public static final int action_settings=0x7f080017;
+        public static final int buttonAddDrink=0x7f080011;
+        public static final int buttonCoffee=0x7f080005;
+        public static final int buttonExpresso=0x7f080007;
+        public static final int buttonFrap=0x7f080006;
+        public static final int buttonGrande=0x7f08000a;
         public static final int buttonHot=0x7f080002;
-        public static final int buttonResetOrder=0x7f080012;
-        public static final int buttonTall=0x7f080008;
-        public static final int buttonVenti=0x7f08000a;
-        public static final int spinnerDairy=0x7f08000e;
-        public static final int spinnerFlavor=0x7f08000c;
+        public static final int buttonResetOrder=0x7f080013;
+        public static final int buttonTall=0x7f080009;
+        public static final int buttonVenti=0x7f08000b;
+        public static final int spinnerDairy=0x7f08000f;
+        public static final int spinnerFlavor=0x7f08000d;
         public static final int tableRow1=0x7f080001;
-        public static final int tableRow2=0x7f080003;
-        public static final int tableRow3=0x7f080007;
-        public static final int tableRow4=0x7f08000b;
-        public static final int tableRow6=0x7f08000d;
-        public static final int tableRow7=0x7f08000f;
-        public static final int tableRow8=0x7f080011;
+        public static final int tableRow2=0x7f080004;
+        public static final int tableRow3=0x7f080008;
+        public static final int tableRow4=0x7f08000c;
+        public static final int tableRow5=0x7f080014;
+        public static final int tableRow6=0x7f08000e;
+        public static final int tableRow7=0x7f080010;
+        public static final int tableRow8=0x7f080012;
+        public static final int textCurrentDrink=0x7f080016;
+        public static final int textDrinksAdded=0x7f080015;
+        public static final int textView2=0x7f080003;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
