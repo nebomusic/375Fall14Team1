@@ -1,5 +1,7 @@
 package com.example.coffeeapp;
 
+import java.sql.Date;
+
 public class Drink {
 	private boolean hot;//hot or cold
 	private String type;//type of drink
@@ -28,9 +30,64 @@ public class Drink {
 		topping = t;
 		dairy = d;
 		size = sz;
+		instructions = ins;
+		served = false;
 		
 		
 		
+	}//end Constructor 2 
+	
+	//Field modifiers
+	public void setHot(boolean h ){
+		hot = h;
 	}
+	public void setType(String t){
+		type = t;
+	}
+	public void setFlavor(String f){
+		flavor = f;
+	}
+	public void setDiary(String d){
+		dairy = d;
+	}
+	public void setSize(int sz){
+		size = sz;
+	}
+	public void setInstructions(String i){
+		instructions = i;
+	}
+	public void setDate(Date d){
+		date = d;
+	}
+	
+	//accessors
+	public boolean getHot(){
+		return hot;
+	}
+	public String getType(){
+		return type;
+	}
+	public String getFlavor(){
+		return flavor;
+	}
+	public String getTopping(){
+		return topping;
+	}
+	public String getDairy(){
+		return dairy;
+	}
+	public int getSize(){
+		return size;
+	}
+	public Date getDate(){
+		return date;
+	}
+	public boolean getServed(){
+		return served;
+	}
+	public void setServed(boolean s){
+		served = s;
+	}
+	
 
-}
+}// end Class Drink
