@@ -26,6 +26,7 @@
             android:id="@+id/btnHot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick ="btnHotClicked"
             android:text="Hot" />
 
         <TextView
@@ -43,19 +44,22 @@
 
         <Button
             android:id="@+id/btnCoffee"
-           android:layout_width="wrap_content"
+           android:layout_weight = "1"
             android:layout_height="wrap_content"
+            android:onClick = "coffeeClicked"
             android:text="Coffee" />
           <Button
             android:id="@+id/btnFrap"
-            android:layout_width="wrap_content"
+            android:layout_weight = "0.2"
             android:layout_height="wrap_content"
+            android:onClick ="frapClicked"
             android:text="Frappachino" />
 
         <Button
             android:id="@+id/btnExpres"
-            android:layout_width="wrap_content"
+            android:layout_weight=".2"
             android:layout_height="wrap_content"
+            android:onClick="expresClicked"
             android:text="Expresso" />
 
       
@@ -69,20 +73,23 @@
 
         <Button
             android:id="@+id/btnTall"
-    android:layout_width="wrap_content"
+    	android:layout_weight ="1"
             android:layout_height="wrap_content"
+            android:onClick="tallClicked"
             android:text="Tall" />
 
         <Button
             android:id="@+id/btnGrande"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+          	android:onClick="grandeClicked"
             android:text="Grande" />
 
         <Button
             android:id="@+id/btnVenti"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+           	android:onClick="vetiClicked"
             android:text="Venti" />
 
     </TableRow>
@@ -94,7 +101,7 @@
 
         <Spinner
             android:id="@+id/spinnerFlavor"
-            android:layout_width="wrap_content"
+            android:layout_weight=".25"
             android:layout_height="wrap_content" />
 
     </TableRow>
@@ -107,7 +114,8 @@
         <Spinner
             android:id="@+id/spinnerDairy"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:weigth=".25" />
 
     </TableRow>
 
@@ -118,8 +126,9 @@
 
         <Button
             android:id="@+id/btnAddDrink"
-            android:layout_width="wrap_content"
+            android:layout_weight ="1"
             android:layout_height="wrap_content"
+            android:onClick ="addDrinkClicked"
             android:text="Add Drink" />
 
     </TableRow>
@@ -131,8 +140,9 @@
 
         <Button
             android:id="@+id/btnReset"
-            android:layout_width="wrap_content"
+            android:layout_weight ="1"
             android:layout_height="wrap_content"
+            android:onClick="resetDrink"
             android:text="Reset Order" />
 
     </TableRow>
@@ -146,7 +156,7 @@
             android:id="@+id/textDrinksAdded"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="---" />
         
         <TextView
             android:id="@+id/textCurrentDrink"
