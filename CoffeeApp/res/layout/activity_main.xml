@@ -43,23 +43,30 @@
 
         <Button
             android:id="@+id/buttonCoffee"
-           android:layout_width="wrap_content"
+           android:layout_weight="0.5"
             android:layout_height="wrap_content"
             android:text="Coffee" />
           <Button
             android:id="@+id/buttonFrap"
-            android:layout_width="wrap_content"
+            android:layout_weight="0.2"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="Frappachino" />
 
         <Button
             android:id="@+id/buttonExpresso"
-            android:layout_width="wrap_content"
+            android:layout_weight="0.2"
             android:layout_height="wrap_content"
             android:text="Expresso" />
 
       
 
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
     </TableRow>
 
     <TableRow
