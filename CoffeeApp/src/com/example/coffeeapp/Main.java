@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -14,17 +15,17 @@ public class Main extends Activity {
 	private Drink currentDrink;
 	
 	//Fields for UI objects
-	private Button buttonHot;
-	private Button buttonCoffee;
-	private Button buttonFrap;
-	private Button buttonExpresso;
-	private Button buttonTall;
-	private Button buttonGrande;
-	private Button buttonVenti;
+	private Button btnHot;
+	private Button btnCoffee;
+	private Button btnFrap;
+	private Button btnExpresso;
+	private Button btnTall;
+	private Button btnGrande;
+	private Button btnVenti;
 	private Spinner spinnerFlavor;
 	private Spinner spinnerDairy;
-	private Button buttonAddDrink;
-	private Button buttonResetOrder;
+	private Button btnAddDrink;
+	private Button btnResetOrder;
 	private TextView textDrinksAdded;
 	private TextView textCurrentDrink;
 
@@ -38,28 +39,34 @@ public class Main extends Activity {
 		currentDrink = new Drink();
 		
 		//Bind to XML
-		buttonHot=(Button)findViewById(R.id.buttonHot);
-		buttonCoffee=(Button)findViewById(R.id.buttonCoffee);
-		buttonFrap=(Button)findViewById(R.id.buttonFrap);
-		buttonExpresso=(Button)findViewById(R.id.buttonExpresso);
-		buttonTall=(Button)findViewById(R.id.buttonTall);
-		buttonGrande=(Button)findViewById(R.id.buttonGrande);
-		buttonVenti=(Button)findViewById(R.id.buttonVenti);
+		btnHot=(Button)findViewById(R.id.btnHot);
+		btnCoffee=(Button)findViewById(R.id.btnCoffee);
+		btnFrap=(Button)findViewById(R.id.btnFrap);
+		btnExpresso=(Button)findViewById(R.id.btnExpresso);
+		btnTall=(Button)findViewById(R.id.btnTall);
+		btnGrande=(Button)findViewById(R.id.btnGrande);
+		btnVenti=(Button)findViewById(R.id.btnVenti);
 		spinnerFlavor=(Spinner)findViewById(R.id.spinnerFlavor);
 		spinnerDairy=(Spinner)findViewById(R.id.spinnerDairy);
-		buttonAddDrink=(Button)findViewById(R.id.buttonAddDrink);
-		buttonResetOrder=(Button)findViewById(R.id.buttonResetOrder);
+		btnAddDrink=(Button)findViewById(R.id.btnAddDrink);
+		btnResetOrder=(Button)findViewById(R.id.btnResetOrder);
 		textDrinksAdded=(TextView)findViewById(R.id.textDrinksAdded);
 		textCurrentDrink=(TextView)findViewById(R.id.textCurrentDrink);
 		
-	
-	
-	
-	
-	
-	
-	
-	}
+		// Populate the Spinner for Flavor
+		ArrayAdapter<CharSequence>flavorAdapter = ArrayAdapter.createFromResource(this,
+				R.array.flavor_array,android.R.layout.simple_spinner_dropdown_item);
+		//Specify the layout to use when the list of choices appears
+		flavorAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		//Apply to the Spinner
+		spinnerFlavor.setAdapter(flavorAdapter);
+		
+		//Populate the Spinner for Dairy
+		ArrayAdapter<CharSequence>dairyAdapter = ArrayAdapter.createFromResource(this,
+				R.array.dairy_array, android.R.layout.simple_spinner_dropdown_item);
+		dairyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		
+		}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -79,4 +86,6 @@ public class Main extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	//function for hot/cold Button
+	pub
 }
