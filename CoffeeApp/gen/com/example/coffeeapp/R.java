@@ -8,6 +8,10 @@
 package com.example.coffeeapp;
 
 public final class R {
+    public static final class array {
+        public static final int dairy_array=0x7f060001;
+        public static final int flavor_array=0x7f060000;
+    }
     public static final class attr {
     }
     public static final class dimen {
@@ -25,52 +29,36 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int TableLayout1=0x7f080000;
-<<<<<<< HEAD
-        public static final int action_settings=0x7f080018;
-        public static final int buttonAddDrink=0x7f080012;
-        public static final int buttonCoffee=0x7f080005;
-        public static final int buttonExpresso=0x7f080007;
-        public static final int buttonFrap=0x7f080006;
-        public static final int buttonGrande=0x7f08000b;
-        public static final int buttonHot=0x7f080002;
-        public static final int buttonResetOrder=0x7f080014;
-        public static final int buttonTall=0x7f08000a;
-        public static final int buttonVenti=0x7f08000c;
-        public static final int spinnerDairy=0x7f080010;
-        public static final int spinnerFlavor=0x7f08000e;
-=======
-        public static final int action_settings=0x7f080017;
-        public static final int btnAddDrink=0x7f080011;
-        public static final int btnCoffee=0x7f080005;
-        public static final int btnExpres=0x7f080007;
-        public static final int btnFrap=0x7f080006;
-        public static final int btnGrande=0x7f08000a;
-        public static final int btnHot=0x7f080002;
-        public static final int btnReset=0x7f080013;
-        public static final int btnTall=0x7f080009;
-        public static final int btnVenti=0x7f08000b;
-        public static final int spinnerDairy=0x7f08000f;
-        public static final int spinnerFlavor=0x7f08000d;
->>>>>>> e325201d8305dc17699a5cb19327e6f601c58773
-        public static final int tableRow1=0x7f080001;
-        public static final int tableRow2=0x7f080004;
-        public static final int tableRow3=0x7f080009;
-        public static final int tableRow4=0x7f08000d;
-        public static final int tableRow5=0x7f080015;
-        public static final int tableRow6=0x7f08000f;
-        public static final int tableRow7=0x7f080011;
-        public static final int tableRow8=0x7f080013;
-        public static final int tableRow9=0x7f080008;
-        public static final int textCurrentDrink=0x7f080017;
-        public static final int textDrinksAdded=0x7f080016;
-        public static final int textView2=0x7f080003;
+        public static final int TableLayout1=0x7f090000;
+        public static final int action_settings=0x7f090017;
+        public static final int btnAddDrink=0x7f090011;
+        public static final int btnCoffee=0x7f090005;
+        public static final int btnExpres=0x7f090006;
+        public static final int btnGrande=0x7f09000a;
+        public static final int btnHot=0x7f090002;
+        public static final int btnReset=0x7f090013;
+        public static final int btnTall=0x7f090009;
+        public static final int btnVenti=0x7f09000b;
+        public static final int spinnerDairy=0x7f09000f;
+        public static final int spinnerFlavor=0x7f09000d;
+        public static final int tableRow1=0x7f090001;
+        public static final int tableRow2=0x7f090004;
+        public static final int tableRow3=0x7f090008;
+        public static final int tableRow4=0x7f09000c;
+        public static final int tableRow5=0x7f090014;
+        public static final int tableRow6=0x7f09000e;
+        public static final int tableRow7=0x7f090010;
+        public static final int tableRow8=0x7f090012;
+        public static final int tableRow9=0x7f090007;
+        public static final int textCurrentDrink=0x7f090016;
+        public static final int textDrinksAdded=0x7f090015;
+        public static final int textView2=0x7f090003;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
+        public static final int main=0x7f080000;
     }
     public static final class string {
         public static final int action_settings=0x7f050002;
@@ -99,10 +87,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }
