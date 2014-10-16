@@ -42,7 +42,7 @@ public class Main extends Activity {
 		btnHot=(Button)findViewById(R.id.btnHot);
 		btnCoffee=(Button)findViewById(R.id.btnCoffee);
 		btnFrap=(Button)findViewById(R.id.btnFrap);
-		btnExpresso=(Button)findViewById(R.id.btnExpresso);
+		btnExpresso=(Button)findViewById(R.id.btnExpres);
 		btnTall=(Button)findViewById(R.id.btnTall);
 		btnGrande=(Button)findViewById(R.id.btnGrande);
 		btnVenti=(Button)findViewById(R.id.btnVenti);
@@ -87,5 +87,5 @@ public class Main extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 	//function for hot/cold Button
-	pub
+	
 }

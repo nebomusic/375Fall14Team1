@@ -58,6 +58,12 @@
             android:layout_height="wrap_content"
             android:onClick="expresClicked"
             android:text="Expresso" />
+         <Button
+            android:id="@+id/btnFrap"
+            android:layout_weight=".2"
+            android:layout_height="wrap_content"
+            android:onClick="frapClicked"
+            android:text="Frappachino" />
 
       
 
@@ -142,7 +148,7 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/btnReset"
+            android:id="@+id/btnResetOrder"
             android:layout_weight ="1"
             android:layout_height="wrap_content"
             android:onClick="resetDrink"
