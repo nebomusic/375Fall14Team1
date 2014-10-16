@@ -43,38 +43,17 @@
         android:layout_height="wrap_content" >
 
         <Button
-<<<<<<< HEAD
-            android:id="@+id/buttonCoffee"
-           android:layout_weight="0.5"
-=======
-            android:id="@+id/btnCoffee"
-           android:layout_weight = "1"
->>>>>>> e325201d8305dc17699a5cb19327e6f601c58773
-            android:layout_height="wrap_content"
-            android:onClick = "coffeeClicked"
-            android:text="Coffee" />
-          <Button
-<<<<<<< HEAD
-            android:id="@+id/buttonFrap"
-            android:layout_weight="0.2"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Frappachino" />
 
-        <Button
-            android:id="@+id/buttonExpresso"
-            android:layout_weight="0.2"
-=======
-            android:id="@+id/btnFrap"
-            android:layout_weight = "0.2"
-            android:layout_height="wrap_content"
-            android:onClick ="frapClicked"
-            android:text="Frappachino" />
+           android:id="@+id/btnCoffee"
+           android:layout_weight = "1"
+           android:layout_height="wrap_content"
+           android:onClick = "coffeeClicked"
+           android:text="Coffee" />
+      
 
         <Button
             android:id="@+id/btnExpres"
             android:layout_weight=".2"
->>>>>>> e325201d8305dc17699a5cb19327e6f601c58773
             android:layout_height="wrap_content"
             android:onClick="expresClicked"
             android:text="Expresso" />
@@ -138,7 +117,7 @@
             android:id="@+id/spinnerDairy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:weigth=".25" />
+           />
 
     </TableRow>
 
