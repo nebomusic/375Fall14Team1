@@ -1,9 +1,11 @@
 package com.example.coffeeapp;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -88,4 +90,38 @@ public class Main extends Activity {
 	}
 	//function for hot/cold Button
 	
+	
+	//button to add drink 
+	public void addDrinkClicked (View v){
+		//set flavor and dairy from spinner 
+		currentDrink.setFlavor(String.valueOf(spinnerFlavor.getSelectedItem())); 
+		currentDrink.setDairy(String.valueOf(spinnerDairy.getSelectedItem())); 
+		// add Drink to Orders
+		orders.addDrink(currentDrink); 
+		textDrinksAdded.setText(String.valueOf(orders.getNumDrinks())); 
+		displayDrink(orders.getNumDrinks()-1); 
+		resetDrink(v); 
+	}
+	//button for reset button 
+	public void resetDrink(View v){
+		currentDrink = new Drink(); 
+		btnCoffee.setBackgroundColor(Color.LTGRAY); 
+		btnFrap.setBackgroundColor(Color.LTGRAY); 
+		btnExpresso.setBackgroundColor(Color.LTGRAY); 
+		
+		btnTall.setBackgroundColor(Color.LTGRAY); 
+		btnGrande.setBackgroundColor(Color.LTGRAY);
+		btnVenti.setBackgroundColor(Color.LTGRAY); 
+	}
+	
+	private void displayDrink(int i){
+		String sOrder = "Just ordered: "; 
+		Drink dDrink = orders.getDrink(i); 
+		sOrder+= String.valueOf(dDrink.getSize())+" ounces of "; 
+		sOrder+= dDrink.getType()+ " with "; 
+		sOrder+= dDrink.getFlavor()+ " and "; 
+		sOrder+= dDrink.getDairy()+ "."; 
+		//display Drink
+		textCurrentDrink.setText(sOrder); 
+	}
 }
