@@ -1,9 +1,11 @@
 package com.example.coffeeapp;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -18,7 +20,7 @@ public class Main extends Activity {
 	private Button btnHot;
 	private Button btnCoffee;
 	private Button btnFrap;
-	private Button btnExpresso;
+	private Button btnExpres;
 	private Button btnTall;
 	private Button btnGrande;
 	private Button btnVenti;
@@ -42,7 +44,7 @@ public class Main extends Activity {
 		btnHot=(Button)findViewById(R.id.btnHot);
 		btnCoffee=(Button)findViewById(R.id.btnCoffee);
 		btnFrap=(Button)findViewById(R.id.btnFrap);
-		btnExpresso=(Button)findViewById(R.id.btnExpresso);
+		btnExpres=(Button)findViewById(R.id.btnExpres);
 		btnTall=(Button)findViewById(R.id.btnTall);
 		btnGrande=(Button)findViewById(R.id.btnGrande);
 		btnVenti=(Button)findViewById(R.id.btnVenti);
@@ -87,5 +89,58 @@ public class Main extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 	//function for hot/cold Button
-	pub
+	public void btnHotClicked(View v){
+		if ( btnHot.getText()=="Hot"){
+			btnHot.setText("Cold");
+			btnHot.setBackgroundColor(Color.BLUE);
+			currentDrink.setHot(false);
+		}//end if
+		else{
+			btnHot.setText("Hot");
+			btnHot.setBackgroundColor(Color.RED);
+			currentDrink.setHot(true);
+		}//end else
+	}//end btnHotClicked
+	// Functions to react to Drink Types
+	public void coffeeClicked(View v){
+		currentDrink.setType("Coffee");
+		btnCoffee.setBackgroundColor(Color.YELLOW);
+		btnFrap.setBackgroundColor(Color.LTGRAY);
+		btnExpres.setBackgroundColor(Color.LTGRAY);
+		}
+	public void frapClicked(View v){
+		currentDrink.setType("Frappacino");
+		btnCoffee.setBackgroundColor(Color.YELLOW);
+		btnFrap.setBackgroundColor(Color.LTGRAY);
+		btnExpres.setBackgroundColor(Color.LTGRAY);
+		}
+	public void expresClicked(View v){
+		currentDrink.setType("Expresso");
+		btnCoffee.setBackgroundColor(Color.YELLOW);
+		btnFrap.setBackgroundColor(Color.LTGRAY);
+		btnExpres.setBackgroundColor(Color.LTGRAY);
+		}
+	
+	// Functions for Drink Sizes
+	public void tallClicked(View v){
+		currentDrink.setSize(8);
+		btnTall.setBackgroundColor(Color.GREEN);
+		btnGrande.setBackgroundColor(Color.LTGRAY);
+		btnVenti.setBackgroundColor(Color.LTGRAY);
+		}
+	public void grandeClicked(View v){
+		currentDrink.setSize(8);
+		btnTall.setBackgroundColor(Color.LTGRAY);
+		btnGrande.setBackgroundColor(Color.GREEN);
+		btnVenti.setBackgroundColor(Color.LTGRAY);
+	}
+	public void ventiClicked(View v){
+		currentDrink.setSize(20);
+		btnTall.setBackgroundColor(Color.LTGRAY);
+		btnGrande.setBackgroundColor(Color.LTGRAY);
+		btnVenti.setBackgroundColor(Color.GREEN);
+		}
+	
+	
+	
 }
