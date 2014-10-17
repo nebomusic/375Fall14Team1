@@ -44,7 +44,11 @@ public class Main extends Activity {
 		btnHot=(Button)findViewById(R.id.btnHot);
 		btnCoffee=(Button)findViewById(R.id.btnCoffee);
 		btnFrap=(Button)findViewById(R.id.btnFrap);
+<<<<<<< HEAD
 		btnExpres=(Button)findViewById(R.id.btnExpres);
+=======
+		btnExpresso=(Button)findViewById(R.id.btnExpres);
+>>>>>>> 2af08ad9e0a98bd9084e8bd449da36bfcaa21901
 		btnTall=(Button)findViewById(R.id.btnTall);
 		btnGrande=(Button)findViewById(R.id.btnGrande);
 		btnVenti=(Button)findViewById(R.id.btnVenti);
@@ -89,6 +93,7 @@ public class Main extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 	//function for hot/cold Button
+<<<<<<< HEAD
 	public void btnHotClicked(View v){
 		if ( btnHot.getText()=="Hot"){
 			btnHot.setText("Cold");
@@ -143,4 +148,41 @@ public class Main extends Activity {
 	
 	
 	
+=======
+	
+	
+	//button to add drink 
+	public void addDrinkClicked (View v){
+		//set flavor and dairy from spinner 
+		currentDrink.setFlavor(String.valueOf(spinnerFlavor.getSelectedItem())); 
+		currentDrink.setDairy(String.valueOf(spinnerDairy.getSelectedItem())); 
+		// add Drink to Orders
+		orders.addDrink(currentDrink); 
+		textDrinksAdded.setText(String.valueOf(orders.getNumDrinks())); 
+		displayDrink(orders.getNumDrinks()-1); 
+		resetDrink(v); 
+	}
+	//button for reset button 
+	public void resetDrink(View v){
+		currentDrink = new Drink(); 
+		btnCoffee.setBackgroundColor(Color.LTGRAY); 
+		btnFrap.setBackgroundColor(Color.LTGRAY); 
+		btnExpresso.setBackgroundColor(Color.LTGRAY); 
+		
+		btnTall.setBackgroundColor(Color.LTGRAY); 
+		btnGrande.setBackgroundColor(Color.LTGRAY);
+		btnVenti.setBackgroundColor(Color.LTGRAY); 
+	}
+	
+	private void displayDrink(int i){
+		String sOrder = "Just ordered: "; 
+		Drink dDrink = orders.getDrink(i); 
+		sOrder+= String.valueOf(dDrink.getSize())+" ounces of "; 
+		sOrder+= dDrink.getType()+ " with "; 
+		sOrder+= dDrink.getFlavor()+ " and "; 
+		sOrder+= dDrink.getDairy()+ "."; 
+		//display Drink
+		textCurrentDrink.setText(sOrder); 
+	}
+>>>>>>> 2af08ad9e0a98bd9084e8bd449da36bfcaa21901
 }

@@ -47,7 +47,7 @@ public class Drink {
 	public void setFlavor(String f){
 		flavor = f;
 	}
-	public void setDiary(String d){
+	public void setDairy(String d){
 		dairy = d;
 	}
 	public void setSize(int sz){

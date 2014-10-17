@@ -12,7 +12,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.coffeeapp.Main" >
+    tools:context="com.example.coffeeapp.Main"
+    android:background="@drawable/coffeebackground" >
 
 
 
@@ -57,6 +58,12 @@
             android:layout_height="wrap_content"
             android:onClick="expresClicked"
             android:text="Expresso" />
+         <Button
+            android:id="@+id/btnFrap"
+            android:layout_weight=".2"
+            android:layout_height="wrap_content"
+            android:onClick="frapClicked"
+            android:text="Frappachino" />
 
       
 
@@ -103,7 +110,7 @@
 
         <Spinner
             android:id="@+id/spinnerFlavor"
-            android:layout_weight=".25"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </TableRow>
@@ -115,7 +122,7 @@
 
         <Spinner
             android:id="@+id/spinnerDairy"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
            />
 
@@ -141,7 +148,7 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/btnReset"
+            android:id="@+id/btnResetOrder"
             android:layout_weight ="1"
             android:layout_height="wrap_content"
             android:onClick="resetDrink"
