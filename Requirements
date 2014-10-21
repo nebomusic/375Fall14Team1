@@ -1,2 +1,12 @@
-The teacher will put his meal in. And it will count the calories for the day. The app will have previous meals stored and add the
-calories. 
+The teacher will put his meal in, and it will count the calories for the day. 
+The app will have previous meals stored and add the calories. 
+The teacher will input the serving size. 
+the teacher will input meals and their calories that he typically eats, and they will be saved for future use. 
+The app should be able to reset the input. 
+The app should be able to track the weekly history. 
+The app will have a main screen that allows the teacher to select between viewing the weekly history, and adding a new meal. 
+The user will be able to reset the history. 
+The app will display the total calories of the meal and the total calories of the day side by side. 
+The app will know the date. 
+The teacher will input the amount of calories that he wants to consume that day, and if he exceeds the calorie count, it will
+alert the teacher.
