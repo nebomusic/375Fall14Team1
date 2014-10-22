@@ -1,0 +1,12 @@
+1. What is the purpose of the app? 
+
+2. What user input does it use? 
+
+3. Does it return anything to the user? 
+
+4. What are the important pieces to this app? 
+
+5. What would you like it to do? 
+
+6. Are there any rules? What are they? 
+

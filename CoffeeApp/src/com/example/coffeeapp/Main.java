@@ -1,5 +1,8 @@
 package com.example.coffeeapp;
 
+
+
+
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -44,11 +47,11 @@ public class Main extends Activity {
 		btnHot=(Button)findViewById(R.id.btnHot);
 		btnCoffee=(Button)findViewById(R.id.btnCoffee);
 		btnFrap=(Button)findViewById(R.id.btnFrap);
-<<<<<<< HEAD
+
 		btnExpres=(Button)findViewById(R.id.btnExpres);
-=======
-		btnExpresso=(Button)findViewById(R.id.btnExpres);
->>>>>>> 2af08ad9e0a98bd9084e8bd449da36bfcaa21901
+
+		btnExpres=(Button)findViewById(R.id.btnExpres);
+
 		btnTall=(Button)findViewById(R.id.btnTall);
 		btnGrande=(Button)findViewById(R.id.btnGrande);
 		btnVenti=(Button)findViewById(R.id.btnVenti);
@@ -71,7 +74,7 @@ public class Main extends Activity {
 		ArrayAdapter<CharSequence>dairyAdapter = ArrayAdapter.createFromResource(this,
 				R.array.dairy_array, android.R.layout.simple_spinner_dropdown_item);
 		dairyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		
+		spinnerDairy.setAdapter(dairyAdapter); 
 		}
 
 	@Override
@@ -93,7 +96,7 @@ public class Main extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 	//function for hot/cold Button
-<<<<<<< HEAD
+
 	public void btnHotClicked(View v){
 		if ( btnHot.getText()=="Hot"){
 			btnHot.setText("Cold");
@@ -115,15 +118,15 @@ public class Main extends Activity {
 		}
 	public void frapClicked(View v){
 		currentDrink.setType("Frappacino");
-		btnCoffee.setBackgroundColor(Color.YELLOW);
-		btnFrap.setBackgroundColor(Color.LTGRAY);
+		btnFrap.setBackgroundColor(Color.YELLOW);
+		btnCoffee.setBackgroundColor(Color.LTGRAY);
 		btnExpres.setBackgroundColor(Color.LTGRAY);
 		}
 	public void expresClicked(View v){
 		currentDrink.setType("Expresso");
-		btnCoffee.setBackgroundColor(Color.YELLOW);
+		btnExpres.setBackgroundColor(Color.YELLOW);
+		btnCoffee.setBackgroundColor(Color.LTGRAY);
 		btnFrap.setBackgroundColor(Color.LTGRAY);
-		btnExpres.setBackgroundColor(Color.LTGRAY);
 		}
 	
 	// Functions for Drink Sizes
@@ -148,8 +151,6 @@ public class Main extends Activity {
 	
 	
 	
-=======
-	
 	
 	//button to add drink 
 	public void addDrinkClicked (View v){
@@ -158,6 +159,7 @@ public class Main extends Activity {
 		currentDrink.setDairy(String.valueOf(spinnerDairy.getSelectedItem())); 
 		// add Drink to Orders
 		orders.addDrink(currentDrink); 
+		textDrinksAdded.setTextColor(Color.WHITE); 
 		textDrinksAdded.setText(String.valueOf(orders.getNumDrinks())); 
 		displayDrink(orders.getNumDrinks()-1); 
 		resetDrink(v); 
@@ -167,11 +169,18 @@ public class Main extends Activity {
 		currentDrink = new Drink(); 
 		btnCoffee.setBackgroundColor(Color.LTGRAY); 
 		btnFrap.setBackgroundColor(Color.LTGRAY); 
-		btnExpresso.setBackgroundColor(Color.LTGRAY); 
+		btnExpres.setBackgroundColor(Color.LTGRAY); 
 		
 		btnTall.setBackgroundColor(Color.LTGRAY); 
 		btnGrande.setBackgroundColor(Color.LTGRAY);
 		btnVenti.setBackgroundColor(Color.LTGRAY); 
+		switch(v.getId()){
+		case(R.id.btnResetOrder):
+			textCurrentDrink.setText(""); 
+			textDrinksAdded.setText(""); 	
+			orders = new Orders(); 
+			break; 
+		}
 	}
 	
 	private void displayDrink(int i){
@@ -181,8 +190,23 @@ public class Main extends Activity {
 		sOrder+= dDrink.getType()+ " with "; 
 		sOrder+= dDrink.getFlavor()+ " and "; 
 		sOrder+= dDrink.getDairy()+ "."; 
+
 		//display Drink
+		textCurrentDrink.setTextColor(Color.WHITE);
 		textCurrentDrink.setText(sOrder); 
+		
 	}
->>>>>>> 2af08ad9e0a98bd9084e8bd449da36bfcaa21901
+
+	public void resetOrder(View v){
+		 
+		btnCoffee.setBackgroundColor(Color.LTGRAY); 
+		btnFrap.setBackgroundColor(Color.LTGRAY); 
+		btnExpres.setBackgroundColor(Color.LTGRAY); 
+		
+		btnTall.setBackgroundColor(Color.LTGRAY); 
+		btnGrande.setBackgroundColor(Color.LTGRAY);
+		btnVenti.setBackgroundColor(Color.LTGRAY); 
+		
+		textCurrentDrink.setText(""); 
+	}
 }

@@ -18,23 +18,19 @@
 
 
 
-    <TableRow
+   <TableRow
         android:id="@+id/tableRow1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
         <Button
             android:id="@+id/btnHot"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:onClick ="btnHotClicked"
             android:text="Hot" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+      
 
     </TableRow>
 
@@ -46,7 +42,7 @@
         <Button
 
            android:id="@+id/btnCoffee"
-           android:layout_weight = "1"
+           android:layout_weight = ".3"
            android:layout_height="wrap_content"
            android:onClick = "coffeeClicked"
            android:text="Coffee" />
@@ -54,16 +50,16 @@
 
         <Button
             android:id="@+id/btnExpres"
-            android:layout_weight=".2"
+            android:layout_weight=".3"
             android:layout_height="wrap_content"
             android:onClick="expresClicked"
             android:text="Expresso" />
          <Button
             android:id="@+id/btnFrap"
-            android:layout_weight=".2"
+            android:layout_weight=".3"
             android:layout_height="wrap_content"
             android:onClick="frapClicked"
-            android:text="Frappachino" />
+            android:text="Frappuccino" />
 
       
 
@@ -82,7 +78,7 @@
 
         <Button
             android:id="@+id/btnTall"
-    	android:layout_weight ="1"
+    	android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="tallClicked"
             android:text="Tall" />
@@ -98,7 +94,7 @@
             android:id="@+id/btnVenti"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-           	android:onClick="vetiClicked"
+           	android:onClick="ventiClicked"
             android:text="Venti" />
 
     </TableRow>
@@ -110,7 +106,7 @@
 
         <Spinner
             android:id="@+id/spinnerFlavor"
-            android:layout_width="match_parent"
+            android:layout_weight=".25"
             android:layout_height="wrap_content" />
 
     </TableRow>
@@ -122,7 +118,7 @@
 
         <Spinner
             android:id="@+id/spinnerDairy"
-            android:layout_width="match_parent"
+            android:layout_weight=".25"
             android:layout_height="wrap_content"
            />
 
@@ -169,7 +165,7 @@
         
         <TextView
             android:id="@+id/textCurrentDrink"
-            android:layout_width="wrap_content"
+            android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:text="TextView" />
 
