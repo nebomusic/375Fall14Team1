@@ -1,0 +1,48 @@
+Menu Intent: 
+History button onclick: btnHistoryclicked
+Meal button onclick: mealbtnclicked
+
+Weekly History Intent: 
+Clear history button onclick:Clearclicked
+Mainmenu button onclick: historyMenuClicked 
+
+Daily Meal Intent: 
+Clea rMeal button onclick: Clearmealclicked
+Main Menu button: mealMenuClicked
+Save Meal button onClick: saveBtnClicked
+
+Classes: Meal
+		String name 
+		Int servingSize
+		Int calPerServing	
+		Date date
+		
+		Public String setName()
+		Public String getName()
+		Public int setServingSize()
+		Public int getServingSize()
+		Public int getCalories() 
+		Public int setCalories()
+		Pubic Date getDate()
+		Private int calculateCalories(int size, int calories) 
+	
+		
+	Main Menu
+	Day 	
+		Fields: 	
+Meal[] meals = {Meal breakfast, Meal lunch, Meal Dinner}
+		
+		Constructor
+Public Day(Meal breakfast, Meal lunch, Meal Dinner)
+
+Methods: 
+Public Meal getBreakfast()
+Public Meal getLunch()
+Public Meal getDinner()
+Public Meal[] meals 
+		
+	Weekly History
+
+		Fields: 
+		Day[] days 
+		Date date 
