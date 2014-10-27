@@ -1,22 +1,66 @@
 Menu Intent: 
-History button onclick: btnHistoryclicked
-Meal button onclick: mealbtnclicked
+History button onclick: btnHistoryClicked
+Meal button onclick: btnMealClicked
 
 Weekly History Intent: 
-Clear history button onclick:Clearclicked
-Mainmenu button onclick: historyMenuClicked 
+Clear history button onclick:clearBtnClicked
+Mainmenu button onclick: mainMenuBtnClicked 
 
 Daily Meal Intent: 
-Clea rMeal button onclick: Clearmealclicked
-Main Menu button: mealMenuClicked
+Clear Meal button onclick: clearMealclicked
+Main Menu button: mainMenuClicked
 Save Meal button onClick: saveBtnClicked
 
-Classes: Meal
-		String name 
-		Int servingSize
-		Int calPerServing	
-		Date date
+Classes:
+	MainActivity.java
+		Fields: 
+		btnHistory
+		btnMeal
 		
+		Methods: 
+		btnHistoryClicked
+		btnMealClicked
+	
+	DailyMealsActivty,java 
+		Fields: 
+		private TextView maxCal
+		private Spinner meal
+		private Spinner savedMeal
+		private EdithTextsize
+		private EditText calsPerServing
+		private EditText mealName
+		private Button btnSave
+		private TextView dailyTotal
+		private Button btnClearMeal
+		private Button btnMainMenu
+		private Meal meal
+		
+		Methods: 
+		public void clearMealClicked
+		public void mainMenuClicked
+		public void saveBtnClicked 
+		public void onCreate
+		
+	WeeklyHistoryActivity.java
+		Fields: 
+		private TextView history
+		private TextView weeklyTotal
+		private Button clearHistoryBtn
+		private Button mainMenuBtn
+		private WeeklyHistory week
+		
+		Methods: 
+		public void clearBtnClicked
+		pubic void mainMenuBtnClicked
+		public void onCreate 
+	Meal.java
+		Fields: 
+		private String name 
+		private int servingSize
+		private int calPerServing	
+		private Date date
+		
+		Methods: 
 		Public String setName()
 		Public String getName()
 		Public int setServingSize()
@@ -27,22 +71,27 @@ Classes: Meal
 		Private int calculateCalories(int size, int calories) 
 	
 		
-	Main Menu
-	Day 	
+
+	Day.java	
 		Fields: 	
-Meal[] meals = {Meal breakfast, Meal lunch, Meal Dinner}
+		private Meal[] meals = {Meal breakfast, Meal lunch, Meal Dinner, int DailyCalTotal}
 		
 		Constructor
-Public Day(Meal breakfast, Meal lunch, Meal Dinner)
+		Public Day(Meal breakfast, Meal lunch, Meal Dinner, int DailyCalTotal )
 
-Methods: 
-Public Meal getBreakfast()
-Public Meal getLunch()
-Public Meal getDinner()
-Public Meal[] meals 
+		Methods: 
+		Public Meal getBreakfast()
+		Public Meal getLunch()
+		Public Meal getDinner()
+		public int getDailyCalTotal()
+		Public Meal[] meals 
 		
-	Weekly History
-
+	WeeklyHistory.java
 		Fields: 
-		Day[] days 
-		Date date 
+		private Day[][] days 
+		private Date date
+		
+		public void getDay(Date date) 
+		public Date getDate()
+		public int getWeeklyTotal 
+	
