@@ -1,15 +1,23 @@
 package com.example.caloriecounter;
 
+
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	}
+	@Override
+	protected void onResume(){
+		super.onResume();
 		setContentView(R.layout.activity_main);
 	}
 
@@ -31,4 +39,16 @@ public class MainActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-}
+	public void handleClick(View v){
+		switch (v.getId()){
+		case R.id.buttonHistory:
+			Intent intentOne = new Intent(this,WeeklyHistory.class);
+			startActivity(intentOne);
+			
+		break;
+		case R.id.buttonMeal:
+			Intent intentTwo = new Intent(this,DailyMealsActivity.class);
+			startActivity(intentTwo);
+			
+		}
+}}
