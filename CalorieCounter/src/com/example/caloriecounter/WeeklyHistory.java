@@ -1,18 +1,25 @@
 package com.example.caloriecounter;
 
+
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 
 public class WeeklyHistory extends Activity {
 
 	private Button mainMenuBtn; 
+	private Button clearBtn; 
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_weekly_history);
+		mainMenuBtn = (Button)findViewById(R.id.mainMenuBtn); 
+		clearBtn = (Button)findViewById(R.id.clearHistoryBtn); 
 	}
 
 	@Override
@@ -32,5 +39,14 @@ public class WeeklyHistory extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	public void mainMenuBtnClicked(View v){
+		Intent menu = new Intent(this, MainActivity.class);
+		startActivity(menu); 
+	}
+	
+	public void clearBtnClicked(View v){
+		
 	}
 }

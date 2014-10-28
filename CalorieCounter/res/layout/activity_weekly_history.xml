@@ -305,12 +305,14 @@
             android:id="@+id/clearHistoryBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="clearBtnClicked"
             android:text="Clear History" />
 
         <Button
             android:id="@+id/mainMenuBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="mainMenuBtnClicked"
             android:text="Main Menu" />
 
           <TextView

@@ -1,9 +1,11 @@
 package com.example.caloriecounter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class DailyMealsActivity extends Activity {
 
@@ -30,5 +32,9 @@ public class DailyMealsActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	public void handleClick(View v){
+		Intent Intent = new Intent (this,MainActivity.class);
+		startActivity(Intent);
 	}
 }
