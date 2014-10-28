@@ -14,48 +14,312 @@
         android:id="@+id/tableRow1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/historyTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Weekly History" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        
+           <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+       
+        <TextView
+            android:id="@+id/breakfastTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BreakFast" />
+        <TextView
+            android:id="@+id/lunchTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lunch" />
+        <TextView
+            android:id="@+id/dinnerTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dinner" />
+
+        <TextView
+            android:id="@+id/totalCalTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Calories " />
+
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
+        
+            <TextView
+            android:id="@+id/monTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monday" />
+            
+                 <TextView
+            android:id="@+id/monBreakfastTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <TextView
+            android:id="@+id/monLunchTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <TextView
+            android:id="@+id/monDinnerTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/monTotalCalTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tuesTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tuesday" />
+        
+               <TextView
+            android:id="@+id/tuesBreakfastTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <TextView
+            android:id="@+id/tuesLunchTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <TextView
+            android:id="@+id/tuesDinnerTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tuesTotalCalTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
+        
+                <TextView
+            android:id="@+id/wedsTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wednesday" />
+        
+               <TextView
+            android:id="@+id/wedsBreakfastTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <TextView
+            android:id="@+id/wedsLunchTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <TextView
+            android:id="@+id/wedsDinnerTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/wedsTotalCalTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
+        
+                <TextView
+            android:id="@+id/thursTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thursday" />
+        
+               <TextView
+            android:id="@+id/thursBreakfastTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <TextView
+            android:id="@+id/thursLunchTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <TextView
+            android:id="@+id/thursDinnerTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/thursTotalCalTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
+        
+                <TextView
+            android:id="@+id/friTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friday" />
+        
+               <TextView
+            android:id="@+id/friBreakfastTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <TextView
+            android:id="@+id/friLunchTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <TextView
+            android:id="@+id/friDinnerTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/friTotalCalTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
+        
+                <TextView
+            android:id="@+id/satTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saturday" />
+        
+               <TextView
+            android:id="@+id/satBreakfastTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <TextView
+            android:id="@+id/satLunchTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <TextView
+            android:id="@+id/satDinnerTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/satTotalCalTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
+        
+                <TextView
+            android:id="@+id/sunTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sunday" />
+        
+               <TextView
+            android:id="@+id/sunBreakfastTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <TextView
+            android:id="@+id/sunLunchTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <TextView
+            android:id="@+id/sunDinnerTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/sunTotalCalTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/clearHistoryBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear History" />
+
+        <Button
+            android:id="@+id/mainMenuBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Main Menu" />
+
+          <TextView
+            android:id="@+id/weeklyTotalTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weekly Total" />
+       
+
     </TableRow>
 
 </LinearLayout>
