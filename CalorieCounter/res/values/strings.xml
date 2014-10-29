@@ -6,5 +6,10 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_weekly_history">WeeklyHistoryActivity</string>
     <string name="title_activity_daily_meals">DailyMealsActivity</string>
+    <string-array name="meal_array">
+        <item>breakfast</item>
+        <item>lunch</item>
+        <item>dinner</item>
+    </string-array>
 
 </resources>

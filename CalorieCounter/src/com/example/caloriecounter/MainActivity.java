@@ -7,13 +7,19 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
+	private Button buttonHistory;
+	private Button buttonMeal;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		buttonHistory = (Button)findViewById(R.id.buttonHistory);
+		buttonMeal = (Button)findViewById(R.id.buttonMeal);
 	}
 	@Override
 	protected void onResume(){
