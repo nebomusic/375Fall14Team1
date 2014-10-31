@@ -17,7 +17,7 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
 	
-	int weeklyCalories = 0; 
+	int weeklyCalories; 
 	private ArrayList<Meal> meals; 
 	//holds the current meal 
 	private Meal meal; 
@@ -46,41 +46,7 @@ public class MainActivity extends Activity {
 
 	//UI elements from the Weekly History XML 
 	private TextView backupTxtView; 
-	private TextView monBreakfastTxtView; 
-	private TextView monLunchTxtView; 
-	private TextView monDinnerTxtView;
-	private TextView monTotalCalTxtView; 
-
-	private TextView tuesBreakfastTxtView;
-	private TextView tuesLunchTxtView; 
-	private TextView tuesDinnerTxtView;
-	private TextView tuesTotalCalTxtView; 
-
-	private TextView wedsBreakfastTxtView;
-	private TextView wedsLunchTxtView;
-	private TextView wedsDinnerTxtView;
-	private TextView wedsTotalCalTxtView; 
-
-	private TextView thursBreakfastTxtView;
-	private TextView thursLunchTxtView;
-	private TextView thursDinnerTxtView;
-	private TextView thursTotalCalTxtView; 
-
-	private TextView friBreakfastTxtView;
-	private TextView friLunchTxtView;
-	private TextView friDinnerTxtView;
-	private TextView friTotalCalTxtView; 
-
-	private TextView satBreakfastTxtView;
-	private TextView satLunchTxtView;
-	private TextView satDinnerTxtView; 
-	private TextView satTotalCalTxtView; 
-
-	private TextView sunBreakfastTxtView;
-	private TextView sunLunchTxtView; 
-	private TextView sunDinnerTxtView;
-	private TextView sunTotalCalTxtView; 
-
+	
 	private TextView weeklyTotalTxtView;
 
 	private Button historyMainBtn; 
@@ -157,42 +123,9 @@ public class MainActivity extends Activity {
 
 	private void screenHistory(){
 		setContentView(R.layout.activity_weekly_history); 
+		
 		backupTxtView = (TextView)findViewById(R.id.backupTxtView); 
-		monBreakfastTxtView=(TextView)findViewById(R.id.monBreakfastTxtView); 
-		monLunchTxtView=(TextView)findViewById(R.id.monLunchTxtView); 
-		monDinnerTxtView=(TextView)findViewById(R.id.monDinnerTxtView);
-		monTotalCalTxtView=(TextView)findViewById(R.id.monTotalCalTxtView); 
-
-		tuesBreakfastTxtView=(TextView)findViewById(R.id.tuesBreakfastTxtView);
-		tuesLunchTxtView=(TextView)findViewById(R.id.tuesLunchTxtView); 
-		tuesDinnerTxtView=(TextView)findViewById(R.id.tuesDinnerTxtView);
-		tuesTotalCalTxtView=(TextView)findViewById(R.id.tuesTotalCalTxtView); 
-
-		wedsBreakfastTxtView=(TextView)findViewById(R.id.wedsBreakfastTxtView); 
-		wedsLunchTxtView=(TextView)findViewById(R.id.wedsLunchTxtView); 
-		wedsDinnerTxtView=(TextView)findViewById(R.id.wedsDinnerTxtView); 
-		wedsTotalCalTxtView=(TextView)findViewById(R.id.wedsTotalCalTxtView); 
-
-		thursBreakfastTxtView=(TextView)findViewById(R.id.thursBreakfastTxtView); 
-		thursLunchTxtView=(TextView)findViewById(R.id.thursLunchTxtView); 
-		thursDinnerTxtView=(TextView)findViewById(R.id.thursDinnerTxtView); 
-		thursTotalCalTxtView=(TextView)findViewById(R.id.thursTotalCalTxtView); 
-
-		friBreakfastTxtView=(TextView)findViewById(R.id.friBreakfastTxtView); 
-		friLunchTxtView=(TextView)findViewById(R.id.friLunchTxtView); 
-		friDinnerTxtView=(TextView)findViewById(R.id.friDinnerTxtView); 
-		friTotalCalTxtView=(TextView)findViewById(R.id.friTotalCalTxtView); 
-
-		satBreakfastTxtView=(TextView)findViewById(R.id.satBreakfastTxtView); 
-		satLunchTxtView=(TextView)findViewById(R.id.satLunchTxtView); 
-		satDinnerTxtView=(TextView)findViewById(R.id.satDinnerTxtView); 
-		satTotalCalTxtView=(TextView)findViewById(R.id.satTotalCalTxtView); 
-
-		sunBreakfastTxtView=(TextView)findViewById(R.id.sunBreakfastTxtView); 
-		sunLunchTxtView=(TextView)findViewById(R.id.sunLunchTxtView); 
-		sunDinnerTxtView=(TextView)findViewById(R.id.sunDinnerTxtView); 
-		sunTotalCalTxtView=(TextView)findViewById(R.id.sunTotalCalTxtView); 
-
+		
 		weeklyTotalTxtView=(TextView)findViewById(R.id.weeklyTotalTxtView);
 
 		historyMainBtn=(Button)findViewById(R.id.historyMainBtn); 
@@ -228,7 +161,7 @@ public class MainActivity extends Activity {
 		int calPerServing = Integer.valueOf(editCPS.getText().toString()); 
 		String day = spinnerDay.getSelectedItem().toString(); 
 		String mealType=spinnerMealType.getSelectedItem().toString(); 
-		int weeklyCalories = 0; 
+		
 		//creates a new meal 
 		meal = new Meal(n,servingSize,calPerServing,day,mealType); 
 		int mealCal=meal.getTotalCalories(); 
@@ -236,7 +169,7 @@ public class MainActivity extends Activity {
 		weeklyCalories+=mealCal; 
 		screenHistory(); 
 		backupTxtView.setText(meals.toString()); 
-		//weeklyTotalTxtView.setText(weeklyCalories); 
+		weeklyTotalTxtView.setText(String.valueOf(weeklyCalories)); 
 		//textDailyTotal.setText(mealCal); 
 	}
 	public void clearHistoryBtnClicked(View v){
@@ -250,27 +183,5 @@ public class MainActivity extends Activity {
 		editName.setText(""); 
 		//textDailyTotal.setText(""); 
 	}
-//
-//	public void saveMealBtnClicked(View v){
-//		
-//		String n = editName.getText().toString(); 
-//		int servingSize = Integer.valueOf(editServingSize.getText().toString()); 
-//		int calPerServing = Integer.valueOf(editCPS.getText().toString()); 
-//		String day = spinnerDay.getSelectedItem().toString(); 
-//		String mealType=spinnerMealType.getSelectedItem().toString(); 
-//		//creates a new meal 
-//		meal = new Meal(n,servingSize,calPerServing,day); 
-//		//holds the calories for the meal 
-//		int mealCalories = meal.getTotalCalories(); 
-//		//adds to the week
-//		for (int i=0; i<week.getDays().size(); i++){
-//			Day dayTraversed=week.getDays().get(i); 
-//			String d=dayTraversed.getDay(); //string that holds the day name 
-//			if(d.equals(day)){//if the day selected is the same as the one on the week
-//				for(int j=0; j<dayTraversed.getMeals().size();j++){//traverses that day of the week through the meals
-//					if()
-//				}
-//			}
-//		}
-//	}
+
 }//end class
