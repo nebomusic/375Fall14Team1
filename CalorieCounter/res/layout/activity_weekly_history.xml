@@ -302,17 +302,17 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/clearHistoryBtn"
+            android:id="@+id/historyClearBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="clearBtnClicked"
             android:text="Clear History" />
 
         <Button
-            android:id="@+id/mainMenuBtn"
+            android:id="@+id/historyMainBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="mainMenuBtnClicked"
+            android:onClick="buttonHistoryMainClicked"
             android:text="Main Menu" />
 
           <TextView

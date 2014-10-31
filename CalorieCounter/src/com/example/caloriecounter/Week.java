@@ -8,10 +8,17 @@ public class Week {
 	
 	//constructor 
 	public Week(){
-		days=new ArrayList<Day>(); 
+		days=new ArrayList<Day>();
+		days.add(new Day("Monday")); 
+		days.add(new Day("Tuesday")); 
+		days.add(new Day("Wednesday")); 
+		days.add(new Day("Thursday")); 
+		days.add(new Day("Friday")); 
+		days.add(new Day("Saturday")); 
+		days.add(new Day("Sunday")); 
 	}
-	public void addDay(Day d){
-		days.add(d); 
+	public ArrayList<Day> getDays(){
+		return days; 
 	}
 	public int getWeeklyTotal(){
 		int total =0; 

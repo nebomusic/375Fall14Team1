@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <TextView
+        <EditText
             android:id="@+id/textMax"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content" >
 
         <Spinner
-            android:id="@+id/spinnerMeal"
+            android:id="@+id/spinnerMealType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -42,6 +42,18 @@
 
         <Spinner
             android:id="@+id/spinnerSavedMeal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </TableRow>
+    
+     <TableRow
+        android:id="@+id/tableRow11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Spinner
+            android:id="@+id/spinnerDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -67,7 +79,7 @@
         android:layout_height="wrap_content" >
 
         <EditText
-            android:id="@+id/editCps"
+            android:id="@+id/editCPS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -81,7 +93,7 @@
         android:layout_height="wrap_content" >
 
         <EditText
-            android:id="@+id/editMname"
+            android:id="@+id/editName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -98,8 +110,10 @@
             android:id="@+id/buttonSave"
             android:layout_weight="0.2"
             android:layout_height="wrap_content"
+            android:gravity = "center" 
+            android:onClick="saveMealBtnClicked"
             android:text="Save Meal"
-            android:gravity = "center" />
+            />
 
     </TableRow>
 
@@ -122,18 +136,18 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/buttonClear"
+            android:id="@+id/buttonMealsClear"
             android:layout_weight="0.2"
             android:layout_height="wrap_content"
             android:text="Clear"
             android:onClick="buttonClearClicked" />
 
         <Button
-            android:id="@+id/buttonMain"
+            android:id="@+id/buttonMealsMain"
             android:layout_weight="0.2"
             android:layout_height="wrap_content"
             android:text="Main Menu"
-            android:onClick="handleClick" />
+            android:onClick="buttonMealsMainClicked" />
 
     </TableRow>
 

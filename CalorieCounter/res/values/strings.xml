@@ -7,9 +7,20 @@
     <string name="title_activity_weekly_history">WeeklyHistoryActivity</string>
     <string name="title_activity_daily_meals">DailyMealsActivity</string>
     <string-array name="meal_array">
-        <item>breakfast</item>
-        <item>lunch</item>
-        <item>dinner</item>
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
     </string-array>
-
+    <string-array name="day_array">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+	<string-array name="mealNames_array">
+	    <item>Meals</item>
+	</string-array>
 </resources>
