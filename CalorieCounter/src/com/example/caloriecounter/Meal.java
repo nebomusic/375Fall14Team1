@@ -36,5 +36,9 @@ public class Meal {
 	public String getType(){
 		return type; 
 	}
+	
+	public String toString(){
+		return "Day "+day+ "Name: "+name+"/n"+ "Type: "+type+"/n"+"Calories: "+ getTotalCalories()+"/n"; 
+	}
 
 }

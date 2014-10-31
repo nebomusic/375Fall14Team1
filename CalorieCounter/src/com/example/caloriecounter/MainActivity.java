@@ -1,6 +1,8 @@
 package com.example.caloriecounter;
 
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,6 +16,9 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
+	
+	int weeklyCalories = 0; 
+	private ArrayList<Meal> meals; 
 	//holds the current meal 
 	private Meal meal; 
 
@@ -40,6 +45,7 @@ public class MainActivity extends Activity {
 	private TextView textDailyTotal; 
 
 	//UI elements from the Weekly History XML 
+	private TextView backupTxtView; 
 	private TextView monBreakfastTxtView; 
 	private TextView monLunchTxtView; 
 	private TextView monDinnerTxtView;
@@ -91,6 +97,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		screenMain();
+		meals = new ArrayList<Meal>(10); 
 	}
 	@Override
 	protected void onResume(){
@@ -150,6 +157,7 @@ public class MainActivity extends Activity {
 
 	private void screenHistory(){
 		setContentView(R.layout.activity_weekly_history); 
+		backupTxtView = (TextView)findViewById(R.id.backupTxtView); 
 		monBreakfastTxtView=(TextView)findViewById(R.id.monBreakfastTxtView); 
 		monLunchTxtView=(TextView)findViewById(R.id.monLunchTxtView); 
 		monDinnerTxtView=(TextView)findViewById(R.id.monDinnerTxtView);
@@ -212,6 +220,34 @@ public class MainActivity extends Activity {
 			screenMeal(); 
 			break; 
 		}
+	}
+	
+	public void saveMealBtnClicked(View v){
+		String n = editName.getText().toString(); 
+		int servingSize = Integer.valueOf(editServingSize.getText().toString()); 
+		int calPerServing = Integer.valueOf(editCPS.getText().toString()); 
+		String day = spinnerDay.getSelectedItem().toString(); 
+		String mealType=spinnerMealType.getSelectedItem().toString(); 
+		int weeklyCalories = 0; 
+		//creates a new meal 
+		meal = new Meal(n,servingSize,calPerServing,day,mealType); 
+		int mealCal=meal.getTotalCalories(); 
+		meals.add(meal); 
+		weeklyCalories+=mealCal; 
+		backupTxtView.setText(meals.toString()); 
+		weeklyTotalTxtView.setText(weeklyCalories); 
+		textDailyTotal.setText(mealCal); 
+	}
+	public void clearHistoryBtnClicked(View v){
+		backupTxtView.setText(""); 
+		weeklyCalories = 0; 
+		weeklyTotalTxtView.setText(""); 
+	}
+	public void buttonMealsClearClicked(View v){
+		editServingSize.setText(""); 
+		editCPS.setText(""); 
+		editName.setText(""); 
+		textDailyTotal.setText(""); 
 	}
 //
 //	public void saveMealBtnClicked(View v){

@@ -31,7 +31,8 @@ public final class R {
     }
     public static final class id {
         public static final int LinearLayout1=0x7f090000;
-        public static final int action_settings=0x7f090044;
+        public static final int action_settings=0x7f090045;
+        public static final int backupTxtView=0x7f090044;
         public static final int breakfastTxtView=0x7f090019;
         public static final int buttonHistory=0x7f090016;
         public static final int buttonMeal=0x7f090017;

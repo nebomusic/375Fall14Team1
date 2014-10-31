@@ -140,7 +140,7 @@
             android:layout_weight="0.2"
             android:layout_height="wrap_content"
             android:text="Clear"
-            android:onClick="buttonClearClicked" />
+            android:onClick="buttonMealsClearClicked" />
 
         <Button
             android:id="@+id/buttonMealsMain"

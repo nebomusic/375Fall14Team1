@@ -305,7 +305,7 @@
             android:id="@+id/historyClearBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="clearBtnClicked"
+            android:onClick="clearHistoryBtnClicked"
             android:text="Clear History" />
 
         <Button
@@ -323,5 +323,11 @@
        
 
     </TableRow>
+
+    <TextView
+        android:id="@+id/backupTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
 
 </LinearLayout>
