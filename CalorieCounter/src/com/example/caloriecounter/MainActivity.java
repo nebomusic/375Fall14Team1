@@ -234,9 +234,10 @@ public class MainActivity extends Activity {
 		int mealCal=meal.getTotalCalories(); 
 		meals.add(meal); 
 		weeklyCalories+=mealCal; 
+		screenHistory(); 
 		backupTxtView.setText(meals.toString()); 
-		weeklyTotalTxtView.setText(weeklyCalories); 
-		textDailyTotal.setText(mealCal); 
+		//weeklyTotalTxtView.setText(weeklyCalories); 
+		//textDailyTotal.setText(mealCal); 
 	}
 	public void clearHistoryBtnClicked(View v){
 		backupTxtView.setText(""); 
@@ -247,7 +248,7 @@ public class MainActivity extends Activity {
 		editServingSize.setText(""); 
 		editCPS.setText(""); 
 		editName.setText(""); 
-		textDailyTotal.setText(""); 
+		//textDailyTotal.setText(""); 
 	}
 //
 //	public void saveMealBtnClicked(View v){
