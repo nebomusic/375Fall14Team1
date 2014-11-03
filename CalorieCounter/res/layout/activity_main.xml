@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#FFD9F9"
     tools:context="com.example.caloriecounter.MainActivity" >
 
     <TableRow
@@ -15,13 +16,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <TextView
-            android:id="@+id/textMax"
-            android:layout_weight ="0.5"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:hint="Main Menu" />
+        
 
+    <TextView 
+        android:id="@+id/textMax" 
+        android:layout_weight="0.5" 
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Main Menu" />
     </TableRow>
 
     <TableRow
@@ -29,27 +31,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <Button
-            android:id="@+id/buttonHistory"
-            android:layout_weight="0.5"
-            android:layout_height="wrap_content"
-            android:text="History"
-            android:onClick="handleClick" />
+        
 
-    </TableRow>
+    <Button 
+        android:id="@+id/buttonMeal" 
+        android:layout_weight="0.5" 
+        android:layout_height="wrap_content" 
+        android:text="Meal" 
+        android:background="#FFC8CC"
+		android:onClick="handleClick" /></TableRow>
 
     <TableRow
         android:id="@+id/tableRow3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <Button
-            android:id="@+id/buttonMeal"
-            android:layout_weight="0.5"
-            android:layout_height="wrap_content"
-            android:text="Meal"
-            android:onClick="handleClick" />
+        
 
+    <Button 
+        android:id="@+id/buttonHistory" 
+        android:layout_weight="0.5" 
+        android:layout_height="wrap_content" 
+        android:text="History" 
+        android:background="#FFDCC8"
+        android:onClick="handleClick" 
+        />
     </TableRow>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="282dp"
+        android:src="@drawable/scale" />
 
 </LinearLayout>

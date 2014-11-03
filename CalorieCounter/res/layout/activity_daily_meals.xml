@@ -8,58 +8,36 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#FFDCC8"
     tools:context="com.example.caloriecounter.DailyMealsActivity" >
 
     <TableRow
         android:id="@+id/tableRow1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
-
-        <EditText
-            android:id="@+id/textMax"
+	  <EditText
+            android:id="@+id/editName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Max" />
+            android:ems="10"
+            android:hint="Enter Meal Name" />
 
     </TableRow>
-
-    <TableRow
-        android:id="@+id/tableRow2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <Spinner
-            android:id="@+id/spinnerMealType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </TableRow>
-
-    <TableRow
-        android:id="@+id/tableRow3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <Spinner
-            android:id="@+id/spinnerSavedMeal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </TableRow>
-    
      <TableRow
-        android:id="@+id/tableRow11"
+        android:id="@+id/tableRow6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <Spinner
-            android:id="@+id/spinnerDay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/editCPS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Calories per Serving" />
 
     </TableRow>
-
-    <TableRow
+  
+     <TableRow
         android:id="@+id/tableRow5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
@@ -74,32 +52,45 @@
     </TableRow>
 
     <TableRow
-        android:id="@+id/tableRow6"
+        android:id="@+id/tableRow2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <EditText
-            android:id="@+id/editCPS"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Enter Calories per Serving" />
+        
 
+    <Spinner 
+        android:id="@+id/spinnerDay" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        />
     </TableRow>
 
-    <TableRow
-        android:id="@+id/tableRow7"
+  
+    
+     <TableRow
+        android:id="@+id/tableRow11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <EditText
-            android:id="@+id/editName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Enter Meal Name" />
+     <Spinner 
+         android:id="@+id/spinnerMealType" 
+         android:layout_width="wrap_content" 
+         android:layout_height="wrap_content" 
+         />
+     </TableRow>
+    	
 
-    </TableRow>
+     <TableRow
+         android:id="@+id/tableRow9"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" >
+
+         <TextView
+             android:id="@+id/textDailytotal"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:hint="Daily Total" />
+     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow8"
@@ -111,22 +102,10 @@
             android:layout_weight="0.2"
             android:layout_height="wrap_content"
             android:gravity = "center" 
+            android:background="#C8FFDD"
             android:onClick="saveMealBtnClicked"
             android:text="Save Meal"
             />
-
-    </TableRow>
-
-    <TableRow
-        android:id="@+id/tableRow9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <TextView
-            android:id="@+id/textDailytotal"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:hint="Daily Total" />
 
     </TableRow>
 
@@ -140,12 +119,14 @@
             android:layout_weight="0.2"
             android:layout_height="wrap_content"
             android:text="Clear"
+            android:background="#F6FFC8"
             android:onClick="buttonMealsClearClicked" />
 
         <Button
             android:id="@+id/buttonMealsMain"
             android:layout_weight="0.2"
             android:layout_height="wrap_content"
+            android:background="#FFD9F9"
             android:text="Main Menu"
             android:onClick="buttonMealsMainClicked" />
 

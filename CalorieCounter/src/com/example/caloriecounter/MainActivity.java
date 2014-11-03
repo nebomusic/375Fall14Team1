@@ -18,6 +18,7 @@ public class MainActivity extends Activity {
 
 	
 	int weeklyCalories; 
+	int dailyCals; 
 	private ArrayList<Meal> meals; 
 	//holds the current meal 
 	private Meal meal; 
@@ -97,13 +98,14 @@ public class MainActivity extends Activity {
 		buttonMealsMain=(Button)findViewById(R.id.buttonMealsMain); 
 
 		spinnerMealType=(Spinner)findViewById(R.id.spinnerMealType); 
-		spinnerSavedMeals=(Spinner)findViewById(R.id.spinnerSavedMeal); 
+	
 		spinnerDay=(Spinner)findViewById(R.id.spinnerDay); 
 
 		textMax=(EditText)findViewById(R.id.textMax); 
 		editServingSize=(EditText)findViewById(R.id.editServingSize); 
 		editCPS=(EditText)findViewById(R.id.editCPS); 
 		editName=(EditText)findViewById(R.id.editName); 
+		textDailyTotal=(TextView)findViewById(R.id.textDailytotal); 
 
 		ArrayAdapter<CharSequence>mealTypeAdapter = ArrayAdapter.createFromResource(this,
 				R.array.meal_array,android.R.layout.simple_spinner_dropdown_item);
@@ -115,10 +117,13 @@ public class MainActivity extends Activity {
 		dayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spinnerDay.setAdapter(dayAdapter);
 		
-		ArrayAdapter<CharSequence>savedMealsAdapter = ArrayAdapter.createFromResource(this,
-				R.array.mealNames_array,android.R.layout.simple_spinner_dropdown_item);
-		savedMealsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		spinnerSavedMeals.setAdapter(savedMealsAdapter);
+		if(meals.size()!=0){
+			for(int i=0; i<meals.size(); i++){
+				dailyCals+= meals.get(i).getTotalCalories(); 
+			}
+		}
+		textDailyTotal.setText("Total calories for today: "+ String.valueOf(dailyCals)); 
+		
 	}
 
 	private void screenHistory(){
@@ -130,6 +135,14 @@ public class MainActivity extends Activity {
 
 		historyMainBtn=(Button)findViewById(R.id.historyMainBtn); 
 		historyClearBtn=(Button)findViewById(R.id.historyClearBtn); 
+		weeklyTotalTxtView = (TextView)findViewById(R.id.weeklyTotalTxtView); 
+		String mealsOfWeek =""; 
+		for(int i=0; i<meals.size(); i++){
+			mealsOfWeek+= meals.get(i).toString(); 
+		}
+		backupTxtView.setText(mealsOfWeek); 
+		weeklyTotalTxtView.setText("Total calories this week: "+String.valueOf(weeklyCalories)); 
+	
 	}
 
 	private void screenMain(){
@@ -168,9 +181,13 @@ public class MainActivity extends Activity {
 		meals.add(meal); 
 		weeklyCalories+=mealCal; 
 		screenHistory(); 
-		backupTxtView.setText(meals.toString()); 
-		weeklyTotalTxtView.setText(String.valueOf(weeklyCalories)); 
-		//textDailyTotal.setText(mealCal); 
+		
+		String mealsOfWeek =""; 
+		for(int i=0; i<meals.size(); i++){
+			mealsOfWeek+= meals.get(i).toString(); 
+		}
+		backupTxtView.setText(mealsOfWeek); 
+		weeklyTotalTxtView.setText("Total calories this week: "+String.valueOf(weeklyCalories)); 
 	}
 	public void clearHistoryBtnClicked(View v){
 		backupTxtView.setText(""); 
@@ -181,7 +198,8 @@ public class MainActivity extends Activity {
 		editServingSize.setText(""); 
 		editCPS.setText(""); 
 		editName.setText(""); 
-		//textDailyTotal.setText(""); 
+		dailyCals=0; 
+		textDailyTotal.setText("Total calories for today: "+String.valueOf(dailyCals)); 
 	}
 
 }//end class

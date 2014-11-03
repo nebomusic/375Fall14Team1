@@ -20,7 +20,5 @@
         <item>Saturday</item>
         <item>Sunday</item>
     </string-array>
-	<string-array name="mealNames_array">
-	    <item>Meals</item>
-	</string-array>
+	
 </resources>

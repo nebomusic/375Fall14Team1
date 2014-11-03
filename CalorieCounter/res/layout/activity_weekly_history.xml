@@ -3,6 +3,7 @@
     android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFDCC8"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -21,13 +22,32 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Weekly History" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/backupTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </TableRow>
 
-    <TextView
-        android:id="@+id/backupTxtView"
+    <TableRow
+        android:id="@+id/tableRow3"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/weeklyTotalTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Weekly Total" />
+
+    </TableRow>
 
     <TableRow
         android:id="@+id/tableRow10"
@@ -36,24 +56,19 @@
 
         <Button
             android:id="@+id/historyClearBtn"
-            android:layout_width="wrap_content"
+            android:layout_weight="0.2"
             android:layout_height="wrap_content"
+            android:background="#F6FFC8"
             android:onClick="clearHistoryBtnClicked"
             android:text="Clear History" />
 
         <Button
             android:id="@+id/historyMainBtn"
-            android:layout_width="wrap_content"
+           	android:layout_weight="0.2"
             android:layout_height="wrap_content"
+            android:background="#FFD9F9"
             android:onClick="buttonHistoryMainClicked"
             android:text="Main Menu" />
-
-          <TextView
-            android:id="@+id/weeklyTotalTxtView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Weekly Total" />
-       
 
     </TableRow>
 
